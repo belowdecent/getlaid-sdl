@@ -11,14 +11,14 @@ typedef enum GTLD_Alignment {
 
 typedef struct GTLD_Axis {
 	GTLD_Alignment alignment;
-	GTLD_Unit* layout;
+	const GTLD_Unit* layout;
 	int count;
 } GTLD_Axis;
 
 int GTLD_SetAxis(
 	GTLD_Axis* axis,
-	int layout_count,
-	GTLD_Unit* layout
+	int count,
+	const GTLD_Unit* layout
 );
 
 #endif 

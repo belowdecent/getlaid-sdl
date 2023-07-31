@@ -1,6 +1,9 @@
 #include <SDL_rect.h>
 #include <SDL_pixels.h>
-#include <getlaid-units.h>
+
+#include <getlaid-container.h>
+
+typedef SDL_Rect GTLD_Rect;
 
 typedef struct GTLD_Padding {
 	GTLD_Unit top;
@@ -34,7 +37,7 @@ typedef struct GTLD_Padding {
 }
 
 typedef struct GTLD_Element {
-	SDL_Rect bounds;
+	GTLD_Rect bounds;
 	SDL_Color color;
 
 	GTLD_Padding padding;
@@ -42,3 +45,15 @@ typedef struct GTLD_Element {
 	struct GTLD_Element* children;
 	int count;
 } GTLD_Element;
+
+int GTLD_UnitToPX(
+	GTLD_Unit unit, 
+	int container_size, 
+	int auto_width
+);
+
+SDL_Rect GTLD_GetChildBounds(
+	GTLD_Container* c,
+	GTLD_Rect parent_rect,
+	int child_count
+);
