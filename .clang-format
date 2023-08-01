@@ -1,0 +1,15 @@
+BasedOnStyle: Google
+IndentWidth: 2
+ContinuationIndentWidth: 2
+
+DerivePointerAlignment: false
+PointerAlignment: Left
+ColumnLimit: 60
+
+AlignAfterOpenBracket: BlockIndent
+AlignEscapedNewlines: Left
+AlignArrayOfStructures: Left
+
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortIfStatementsOnASingleLine: Never
+
