@@ -1,3 +1,6 @@
+#ifndef __GTLD_ELEMENT
+#define __GTLD_ELEMENT
+
 #include <SDL_rect.h>
 #include <SDL_pixels.h>
 
@@ -52,8 +55,10 @@ int GTLD_UnitToPX(
 	int auto_width
 );
 
-SDL_Rect GTLD_GetChildBounds(
+GTLD_Rect* GTLD_GetChildrenBounds(
 	GTLD_Container* c,
 	GTLD_Rect parent_rect,
 	int child_count
 );
+
+#endif
