@@ -44,6 +44,7 @@ typedef struct GTLD_Element {
 	SDL_Color color;
 
 	GTLD_Padding padding;
+	GTLD_Container container;
 
 	struct GTLD_Element* children;
 	int count;

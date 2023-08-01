@@ -115,16 +115,18 @@ static int set_cross_axis_coords(
 ) {
 	for (int i = 0; i < state->count; ++i) {
 		COORD(&state->rects[i], dir) = COORD(&state->parent_rect, dir);
+		int offset;
 
 		switch (align) {
 			case GTLD_ALIGN_BEGIN: break;
 			case GTLD_ALIGN_CENTER:
-				COORD(&state->rects[i], dir) += SIZE(&state->parent_rect, dir);
-				COORD(&state->rects[i], dir) -= SIZE(&state->rects[i], dir) / 2;
+				offset = SIZE(&state->parent_rect, dir) - SIZE(&state->rects[i], dir);
+				offset = offset / 2;
+				COORD(&state->rects[i], dir) += offset;
 				break;
 			case GTLD_ALIGN_END:
-				COORD(&state->rects[i], dir) += SIZE(&state->parent_rect, dir);
-				COORD(&state->rects[i], dir) -= SIZE(&state->rects[i], dir);
+				offset = SIZE(&state->parent_rect, dir) - SIZE(&state->rects[i], dir);
+				COORD(&state->rects[i], dir) += offset;
 				break;
 		}
 	}
