@@ -12,6 +12,6 @@ typedef struct GTLD_Unit {
 	double value;
 } GTLD_Unit;
 
-const GTLD_Unit GTLD_AUTOSIZE = (GTLD_Unit) {GTLD_UNIT_AUTO, 0}; 
+static const GTLD_Unit GTLD_AUTOSIZE = (GTLD_Unit) {GTLD_UNIT_AUTO, 0}; 
 
 #endif

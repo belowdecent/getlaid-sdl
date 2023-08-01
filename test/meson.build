@@ -4,6 +4,4 @@ getlaid_test = executable(
   include_directories : inc,
   link_with : getlaid)
 
-test('checking out stuff', 
-  getlaid_test,
-  verbose : true)
+test('ensure autocontainers use the same layout', getlaid_test)

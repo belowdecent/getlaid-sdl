@@ -23,9 +23,9 @@ typedef struct GTLD_Container {
 	GTLD_Axis cross;
 } GTLD_Container;
 
-#define GTLD_AUTOCONTAINER(direction, main_align, cross_align)\
+#define GTLD_AUTOCONTAINER(dir, main_align, cross_align)\
 (GTLD_Container) {\
-	.direction = direction,\
+	.direction = dir,\
 	.main = {\
 		.layout = &GTLD_AUTOSIZE,\
 		.count = 1,\
