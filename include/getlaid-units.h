@@ -12,6 +12,12 @@ typedef struct GTLD_Unit {
 	double value;
 } GTLD_Unit;
 
+int GTLD_UnitToPX(
+	GTLD_Unit unit, 
+	int container_size, 
+	int auto_width
+);
+
 static const GTLD_Unit GTLD_AUTOSIZE = (GTLD_Unit) {GTLD_UNIT_AUTO, 0}; 
 
 #endif

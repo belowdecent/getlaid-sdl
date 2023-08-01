@@ -5,6 +5,7 @@
 #include <getlaid-container.h>
 #include <getlaid-element.h>
 #include <getlaid-units.h>
+#include <getlaid-padding.h>
 
 #endif
 

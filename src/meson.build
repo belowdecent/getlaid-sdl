@@ -1,6 +1,8 @@
 getlaid_sources = [
-  'getlaid-axis.c',
-  'getlaid-element.c',
+  'layout/getlaid-axis.c',
+  'layout/getlaid-element.c',
+  'layout/getlaid-padding.c',
+  'layout/getlaid-units.c',
 ]
 getlaid = library(
   'getlaid-sdl',

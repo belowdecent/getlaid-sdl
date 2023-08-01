@@ -12,6 +12,7 @@ inc = include_directories('include')
 subdir('include')
 subdir('src')
 subdir('test')
+subdir('examples')
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(

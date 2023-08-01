@@ -13,8 +13,6 @@
 
 #define assert_with_msg(expr) assert((expr) && debug_message)
 int main() {
-	char debug_message[256];
-
 	GTLD_Element el = {
 		.count = 2,
 		.children = malloc(sizeof(GTLD_Element) * 2), 
