@@ -2,6 +2,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MIN(a, b) ((a) < (b)) ? (a) : (b)
+#define _GTLD_DEFAULT_ELEMENT_CAPACITY 2
+
+GTLD_Element* GTLD_AddChildToElement(GTLD_Element* parent, GTLD_Element child) {
+	if (parent == NULL)
+		return NULL;
+
+	if (parent->capacity <= parent->count) {
+		parent->capacity = MIN(_GTLD_DEFAULT_ELEMENT_CAPACITY, parent->capacity * 3 / 2);
+		GTLD_Element* tmp = reallocarray(parent->children, parent->capacity, sizeof(GTLD_Element));
+		if (tmp == NULL) {
+			fprintf(stderr, "couldn't resize element(%i) children", parent->id);
+			exit(1);
+		}
+
+		parent->children = tmp;
+	}
+
+	parent->children[parent->count] = child; 
+	return &(parent->children[parent->count]);
+};
+
+// int GTLD_PruneChildrenArrays(GTLD_Element* root) {
+// }
+//
+// typedef struct TravelNode {
+// 	GTLD_Element* node;
+// 	int checking_branch;
+// } TravelNode;
+
+// int GTLD_PostOrderApply(GTLD_Element* root) {
+// 	int capacity = root->capacity;
+// 	TravelNode* arr_stack = malloc(sizeof(TravelNode) * capacity);
+// 	int count = 0;
+//
+// 	GTLD_Element* node = root;
+//
+// 	while (count != 0 || node) {
+// 		if (node != NULL) {
+// 			if (capacity <= count) {
+// 				capacity = capacity * 2;
+// 				TravelNode* tmp = reallocarray(arr_stack, capacity, sizeof(TravelNode));
+// 				if (tmp == NULL) {
+// 					fprintf(stderr, "error during traversal\n");
+// 					exit(1);
+// 				}
+// 				arr_stack = tmp;
+// 			}
+//
+// 			arr_stack[count] = (TravelNode) {node, 0};
+// 			++count;
+//
+// 			if (node->count <)
+// 		}
+// 	}
+// }
+
 typedef struct ResizingState {
 	GTLD_Rect parent_rect;
 	GTLD_Rect* rects;
@@ -10,9 +67,6 @@ typedef struct ResizingState {
 	int free_space_main;
 } ResizingState;
 
-
-
-#define MIN(a, b) ((a) < (b)) ? (a) : (b)
 #define COORD(bound, dir) (*(dir == GTLD_ROW ? &(bound)->x : &(bound)->y))
 #define SIZE(bound, dir)  (*(dir == GTLD_ROW ? &(bound)->w : &(bound)->h))
 

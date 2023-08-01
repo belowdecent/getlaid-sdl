@@ -7,10 +7,13 @@
 #include <getlaid-padding.h>
 
 typedef struct GTLD_Element {
+	int id;
+
 	GTLD_Rect bounds;
 	GTLD_Padding padding;
 	GTLD_Container container;
 	struct GTLD_Element* children;
+	int capacity;
 	int count;
 } GTLD_Element;
 

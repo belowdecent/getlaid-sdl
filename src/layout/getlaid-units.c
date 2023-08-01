@@ -16,3 +16,5 @@ int GTLD_UnitToPX(
 
 	return -1;
 }
+
+const GTLD_Unit GTLD_AUTOSIZE = (GTLD_Unit) {GTLD_UNIT_AUTO, 0}; 

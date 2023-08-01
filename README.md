@@ -18,6 +18,6 @@ from a layout description written in C.
 ### Instructions:
 To build the project simply use `meson compile`
 ```
-> meson compile -C build
+meson compile -C build
 ```
 Alongside the library, examples will be created which you can freely check out.

@@ -18,6 +18,6 @@ int GTLD_UnitToPX(
 	int auto_width
 );
 
-static const GTLD_Unit GTLD_AUTOSIZE = (GTLD_Unit) {GTLD_UNIT_AUTO, 0}; 
+extern const GTLD_Unit GTLD_AUTOSIZE; 
 
 #endif
