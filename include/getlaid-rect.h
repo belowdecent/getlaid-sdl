@@ -1,3 +1,9 @@
+/**
+ * \file getlaid-rect.h 
+ *
+ * For now a simple rect struct to interact with SDL
+ */
+
 #ifndef __GTLD_RECT
 #define __GTLD_RECT
 

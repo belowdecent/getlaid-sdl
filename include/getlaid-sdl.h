@@ -1,3 +1,8 @@
+/** \file getlaid-sdl.h
+ *
+ * Main include header file for the GetLaid library
+ */
+
 #ifndef __GTLD
 #define __GTLD
 
