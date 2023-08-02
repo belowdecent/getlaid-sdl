@@ -166,7 +166,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a new element within a tree with given parameters. </p>
-<p>\params[out] tree Tree in which element should be created \params[out] parent Element, to which children created element will be appended or NULL to create an orphan \params bounds Bounds of the created element \params padding Padding of the created element \params container Container of the created element</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tree</td><td>Tree in which element should be created </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">parent</td><td>Element, to which children created element will be appended or NULL to create an orphan </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">bounds</td><td>Bounds of the created element </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">padding</td><td>Padding of the created element </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">container</td><td>Container of the created element</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a newly created element </dd></dl>
 
 </div>
@@ -188,7 +197,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a tree with element as the root. </p>
-<p>\params[in] element Root of the tree, if NULL a new element created with id of 0</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Root of the tree, if NULL a new element created with id of 0</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="structGTLD__Tree.html" title="A tree of GTLD_Elements, additionally manages ids of newly created elements.">GTLD_Tree</a> struct </dd></dl>
 
 </div>

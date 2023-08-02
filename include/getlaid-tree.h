@@ -33,7 +33,7 @@ typedef struct GTLD_Tree {
 /**
  * Creates a tree with element as the root
  *
- * \params[in] element Root of the tree, if NULL a new
+ * \param[in] element Root of the tree, if NULL a new
  * element created with id of 0
  *
  * \returns a GTLD_Tree struct
@@ -43,13 +43,13 @@ GTLD_Tree GTLD_CreateTree(const GTLD_Element* element);
 /**
  * Creates a new element within a tree with given parameters
  *
- * \params[out] tree Tree in which element should be created
- * \params[out] parent Element, to which children
+ * \param[out] tree Tree in which element should be created
+ * \param[out] parent Element, to which children
  *                     created element will be appended
  *                     or NULL to create an orphan
- * \params bounds Bounds of the created element
- * \params padding Padding of the created element
- * \params container Container of the created element
+ * \param bounds Bounds of the created element
+ * \param padding Padding of the created element
+ * \param container Container of the created element
  *
  * \returns A pointer to a newly created element
  */
