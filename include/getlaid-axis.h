@@ -51,4 +51,6 @@ int GTLD_SetAxis(
   GTLD_Axis* axis, int count, const GTLD_Unit* layout
 );
 
+extern const GTLD_Axis GTLD_AUTOAXIS;
+
 #endif

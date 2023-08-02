@@ -33,24 +33,19 @@ typedef struct GTLD_Container {
   GTLD_Repeat
     repeat; /**< /todo make it a GTLD_Axis property */
 
-  GTLD_Axis main;  /**< main axis */
-  GTLD_Axis cross; /**< cross axis */
+  const GTLD_Axis* main;  /**< main axis */
+  const GTLD_Axis* cross; /**< cross axis */
 } GTLD_Container;
 
 /** Helper macro to create containers where children are
  * equally aligned */
-#define GTLD_AUTOCONTAINER(dir)   \
-  (GTLD_Container) {              \
-    .direction = dir,             \
-    .main =                       \
-      {                           \
-        .layout = &GTLD_AUTOSIZE, \
-        .count = 1,               \
-      },                          \
-    .cross = {                    \
-      .layout = &GTLD_AUTOSIZE,   \
-      .count = 1,                 \
-    }                             \
+#define GTLD_AUTOCONTAINER(dir)                   \
+  (GTLD_Container) {                              \
+    .direction = dir,                             \
+    .main = &GTLD_AUTOAXIS.cross = &GTLD_AUTOAXIS \
   }
+
+extern const GTLD_Container GTLD_AUTOROW;
+extern const GTLD_Container GTLD_AUTOCOLUMN;
 
 #endif

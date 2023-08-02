@@ -11,5 +11,7 @@ var getlaid_container_8h =
       [ "GTLD_REPEAT_CYCLE", "getlaid-container_8h.html#a85956c9d085b0d4956882782d26ebba2ab74c1fb26ae731406f89c12fadfa6053", null ],
       [ "GTLD_REPEAT_WRAP", "getlaid-container_8h.html#a85956c9d085b0d4956882782d26ebba2a84b1d416bf85e47fe6541a101560c0d9", null ],
       [ "GTLD_REPEAT_NONE", "getlaid-container_8h.html#a85956c9d085b0d4956882782d26ebba2a54f136341f6749fde936bdccc63b17d7", null ]
-    ] ]
+    ] ],
+    [ "GTLD_AUTOCOLUMN", "getlaid-container_8h.html#aa97f4e4c0cc8d9e645e82e0c8329a3ef", null ],
+    [ "GTLD_AUTOROW", "getlaid-container_8h.html#acd2e1d595e71be547e1c9727323bb806", null ]
 ];

@@ -31,7 +31,7 @@ typedef enum GTLD_UnitType {
  */
 typedef struct GTLD_Unit {
   GTLD_UnitType unit;
-  double value;
+  float value;
 } GTLD_Unit;
 
 /**

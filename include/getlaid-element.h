@@ -19,11 +19,12 @@ typedef struct GTLD_Element {
   int id; /**< will be used to bind outside data to the tree
            */
 
-  GTLD_Rect bounds; /**< Bounds of the element, which are
+  GTLD_Rect* bounds; /**< Bounds of the element, which are
                        influenced by the parent layout */
-  GTLD_Padding padding; /**< Inner padding, influences
-                           bounds of children elements */
-  GTLD_Container
+  const GTLD_Padding*
+    padding; /**< Inner padding, influences
+         bounds of children elements */
+  const GTLD_Container*
     container; /**< Container, defines the layout of the
                   element children */
   struct GTLD_Element*
@@ -41,8 +42,8 @@ typedef struct GTLD_Element {
  * \returns a array of child_count GTLD_Rects
  */
 GTLD_Rect* GTLD_GetChildrenBounds(
-  const GTLD_Container* container, GTLD_Rect parent_rect,
-  int child_count
+  const GTLD_Container* container,
+  const GTLD_Rect* parent_rect, int child_count
 );
 
 #endif

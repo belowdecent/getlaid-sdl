@@ -24,11 +24,11 @@ typedef struct GTLD_Padding {
 /**
  * Creates a new GTLD_Rect shrunk by the padding.
  *
- * \param rect Rect to shrink
- * \param padding Padding to shrink by
+ * \param[in] rect Rect to shrink
+ * \param[in] padding Padding to shrink by
  */
 GTLD_Rect GTLD_PadBounds(
-  GTLD_Rect rect, GTLD_Padding padding
+  const GTLD_Rect* rect, const GTLD_Padding* padding
 );
 
 /**

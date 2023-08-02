@@ -1,6 +1,8 @@
 #include <getlaid-axis.h>
 #include <stdlib.h>
 
+#include "getlaid-units.h"
+
 int GTLD_SetAxis(
   GTLD_Axis* axis, int count, const GTLD_Unit* layout
 ) {
@@ -17,3 +19,8 @@ int GTLD_SetAxis(
 
   return 0;
 }
+
+const GTLD_Axis GTLD_AUTOAXIS = {
+  .layout = &GTLD_AUTOSIZE,
+  .count = 1,
+  .alignment = GTLD_ALIGN_BEGIN};

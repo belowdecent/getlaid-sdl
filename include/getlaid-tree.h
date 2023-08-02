@@ -47,15 +47,15 @@ GTLD_Tree GTLD_CreateTree(GTLD_Element* element);
  * \param[out] parent Element, to which children
  *                     created element will be appended
  *                     or NULL to create an orphan
- * \param bounds Bounds of the created element
- * \param padding Padding of the created element
- * \param container Container of the created element
+ * \param[in] bounds Bounds of the created element
+ * \param[in] padding Padding of the created element
+ * \param[in] container Container of the created element
  *
  * \returns A pointer to a newly created element
  */
 GTLD_Element* GTLD_CreateElement(
-  GTLD_Tree* tree, GTLD_Element* parent, GTLD_Rect bounds,
-  GTLD_Padding padding, GTLD_Container container
+  GTLD_Tree* tree, GTLD_Element* parent, GTLD_Rect* bounds,
+  GTLD_Padding* padding, GTLD_Container* container
 );
 
 /**

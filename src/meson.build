@@ -3,6 +3,9 @@ getlaid_sources = [
   'layout/getlaid-element.c',
   'layout/getlaid-padding.c',
   'layout/getlaid-units.c',
+  'layout/getlaid-container.c',
+
+  'tree/getlaid-tree.c'
 ]
 getlaid = library(
   'getlaid-sdl',
