@@ -19,9 +19,7 @@ int main(void) {
     .children = malloc(sizeof(GTLD_Element) * 3),
     .padding = GTLD_PADDING_ALL(GTLD_UNIT_PX, 10),
     .bounds = {.x = 10, .y = 10, .w = 500, .h = 128},
-    .container = GTLD_AUTOCONTAINER(
-      GTLD_ROW, GTLD_ALIGN_BEGIN, GTLD_ALIGN_CENTER
-    )
+    .container = GTLD_AUTOCONTAINER(GTLD_ROW)
   };
 
   el.children[0] = (GTLD_Element){0};

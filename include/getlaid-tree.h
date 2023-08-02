@@ -38,7 +38,7 @@ typedef struct GTLD_Tree {
  *
  * \returns a GTLD_Tree struct
  */
-GTLD_Tree GTLD_CreateTree(const GTLD_Element* element);
+GTLD_Tree GTLD_CreateTree(GTLD_Element* element);
 
 /**
  * Creates a new element within a tree with given parameters
@@ -56,6 +56,24 @@ GTLD_Tree GTLD_CreateTree(const GTLD_Element* element);
 GTLD_Element* GTLD_CreateElement(
   GTLD_Tree* tree, GTLD_Element* parent, GTLD_Rect bounds,
   GTLD_Padding padding, GTLD_Container container
+);
+
+/**
+ * Inserts orphan element into parent elements children,
+ * the function does not ensure orphanness of the passed
+ * element
+ *
+ * \param[out] parent Element into which orphan element is
+ * inserted
+ * \param[in] orphan Element which is inserted to
+ * parent's children
+ *
+ * \returns
+ * 0, if adoption was successful
+ * 1,
+ */
+int GTLD_AdoptOrphanElement(
+  GTLD_Element* parent, GTLD_Element* orphan, int position
 );
 
 #endif

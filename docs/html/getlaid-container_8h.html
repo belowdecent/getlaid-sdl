@@ -112,9 +112,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a67a5f457337d5b34a75e196f0cb30d4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#a67a5f457337d5b34a75e196f0cb30d4f">GTLD_AUTOCONTAINER</a>(dir,  main_align,  cross_align)</td></tr>
-<tr class="memdesc:a67a5f457337d5b34a75e196f0cb30d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to create containers where children are equally aligned.  <br /></td></tr>
-<tr class="separator:a67a5f457337d5b34a75e196f0cb30d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e70e2fee735afa78cdf9ba7665511e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#ae1e70e2fee735afa78cdf9ba7665511e">GTLD_AUTOCONTAINER</a>(dir)</td></tr>
+<tr class="memdesc:ae1e70e2fee735afa78cdf9ba7665511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to create containers where children are equally aligned.  <br /></td></tr>
+<tr class="separator:ae1e70e2fee735afa78cdf9ba7665511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -134,8 +134,8 @@ Enumerations</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Two-dimensional container consisting of main and cross axes, akin to CSS Flexbox. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a67a5f457337d5b34a75e196f0cb30d4f" name="a67a5f457337d5b34a75e196f0cb30d4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67a5f457337d5b34a75e196f0cb30d4f">&#9670;&#160;</a></span>GTLD_AUTOCONTAINER</h2>
+<a id="ae1e70e2fee735afa78cdf9ba7665511e" name="ae1e70e2fee735afa78cdf9ba7665511e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e70e2fee735afa78cdf9ba7665511e">&#9670;&#160;</a></span>GTLD_AUTOCONTAINER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,40 +144,22 @@ Enumerations</h2></td></tr>
           <td class="memname">#define GTLD_AUTOCONTAINER</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">dir, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname">dir</td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">main_align, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">cross_align&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  (<a class="code hl_struct" href="structGTLD__Container.html">GTLD_Container</a>) {                                     \</div>
-<div class="line">    .direction = dir,                                    \</div>
-<div class="line">    .main =                                              \</div>
-<div class="line">      {                                                  \</div>
-<div class="line">        .layout = &amp;<a class="code hl_variable" href="getlaid-units_8h.html#a89a34f6a6d70467b8b3bb82f4acb407a">GTLD_AUTOSIZE</a>,                        \</div>
-<div class="line">        .count = 1,                                      \</div>
-<div class="line">        .alignment = main_align,                         \</div>
-<div class="line">      },                                                 \</div>
-<div class="line">    .cross = {                                           \</div>
-<div class="line">      .layout = &amp;<a class="code hl_variable" href="getlaid-units_8h.html#a89a34f6a6d70467b8b3bb82f4acb407a">GTLD_AUTOSIZE</a>,                          \</div>
-<div class="line">      .count = 1,                                        \</div>
-<div class="line">      .alignment = cross_align,                          \</div>
-<div class="line">    }                                                    \</div>
+<b>Value:</b><div class="fragment"><div class="line">  (<a class="code hl_struct" href="structGTLD__Container.html">GTLD_Container</a>) {              \</div>
+<div class="line">    .direction = dir,             \</div>
+<div class="line">    .main =                       \</div>
+<div class="line">      {                           \</div>
+<div class="line">        .layout = &amp;<a class="code hl_variable" href="getlaid-units_8h.html#a89a34f6a6d70467b8b3bb82f4acb407a">GTLD_AUTOSIZE</a>, \</div>
+<div class="line">        .count = 1,               \</div>
+<div class="line">      },                          \</div>
+<div class="line">    .cross = {                    \</div>
+<div class="line">      .layout = &amp;<a class="code hl_variable" href="getlaid-units_8h.html#a89a34f6a6d70467b8b3bb82f4acb407a">GTLD_AUTOSIZE</a>,   \</div>
+<div class="line">      .count = 1,                 \</div>
+<div class="line">    }                             \</div>
 <div class="line">  }</div>
 <div class="ttc" id="agetlaid-units_8h_html_a89a34f6a6d70467b8b3bb82f4acb407a"><div class="ttname"><a href="getlaid-units_8h.html#a89a34f6a6d70467b8b3bb82f4acb407a">GTLD_AUTOSIZE</a></div><div class="ttdeci">const GTLD_Unit GTLD_AUTOSIZE</div><div class="ttdoc">GTLD_Axis uses pointers to GTLD_Units as layout, this constant is created to minimize creation of the...</div></div>
 <div class="ttc" id="astructGTLD__Container_html"><div class="ttname"><a href="structGTLD__Container.html">GTLD_Container</a></div><div class="ttdoc">Main object for defining layouts.</div><div class="ttdef"><b>Definition</b> getlaid-container.h:30</div></div>

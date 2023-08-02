@@ -39,20 +39,18 @@ typedef struct GTLD_Container {
 
 /** Helper macro to create containers where children are
  * equally aligned */
-#define GTLD_AUTOCONTAINER(dir, main_align, cross_align) \
-  (GTLD_Container) {                                     \
-    .direction = dir,                                    \
-    .main =                                              \
-      {                                                  \
-        .layout = &GTLD_AUTOSIZE,                        \
-        .count = 1,                                      \
-        .alignment = main_align,                         \
-      },                                                 \
-    .cross = {                                           \
-      .layout = &GTLD_AUTOSIZE,                          \
-      .count = 1,                                        \
-      .alignment = cross_align,                          \
-    }                                                    \
+#define GTLD_AUTOCONTAINER(dir)   \
+  (GTLD_Container) {              \
+    .direction = dir,             \
+    .main =                       \
+      {                           \
+        .layout = &GTLD_AUTOSIZE, \
+        .count = 1,               \
+      },                          \
+    .cross = {                    \
+      .layout = &GTLD_AUTOSIZE,   \
+      .count = 1,                 \
+    }                             \
   }
 
 #endif

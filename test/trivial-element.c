@@ -6,6 +6,7 @@
 #include "getlaid-axis.h"
 #include "getlaid-container.h"
 #include "getlaid-element.h"
+#include "getlaid-rect.h"
 
 #define PARENT_X 20
 #define PARENT_Y 10
@@ -15,30 +16,28 @@
 #define assert_with_msg(expr) \
   assert((expr) && debug_message)
 int main() {
+  GTLD_Rect rect = {
+    .x = PARENT_X,
+    .y = PARENT_Y,
+    .w = PARENT_W,
+    .h = PARENT_H};
   GTLD_Element el = {
     .count = 2,
     .children = malloc(sizeof(GTLD_Element) * 2),
-    .bounds =
-      {.x = PARENT_X,
-               .y = PARENT_Y,
-               .w = PARENT_W,
-               .h = PARENT_H},
-    .container = GTLD_AUTOCONTAINER(
-      GTLD_ROW, GTLD_ALIGN_BEGIN, GTLD_ALIGN_CENTER
-    )
-  };
+    .bounds = rect,
+    .container = GTLD_AUTOCONTAINER(GTLD_ROW)};
 
   el.children[0] = (GTLD_Element){0};
   el.children[1] = (GTLD_Element){0};
 
-  GTLD_Rect* rect =
+  GTLD_Rect* rects =
     GTLD_GetChildrenBounds(&el.container, el.bounds, 2);
 
   for (int i = 0; i < el.count; ++i) {
-    el.children[i].bounds = rect[i];
+    el.children[i].bounds = rects[i];
   }
 
-  free(rect);
+  free(rects);
 
   for (int i = 0; i < el.count; ++i) {
     printf(
