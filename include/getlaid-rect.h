@@ -1,5 +1,5 @@
 /**
- * \file getlaid-rect.h 
+ * \file getlaid-rect.h
  *
  * For now a simple rect struct to interact with SDL
  */

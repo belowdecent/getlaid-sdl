@@ -6,5 +6,6 @@ var searchData=
   ['getlaid_2dpadding_2eh_3',['getlaid-padding.h',['../getlaid-padding_8h.html',1,'']]],
   ['getlaid_2drect_2eh_4',['getlaid-rect.h',['../getlaid-rect_8h.html',1,'']]],
   ['getlaid_2dsdl_2eh_5',['getlaid-sdl.h',['../getlaid-sdl_8h.html',1,'']]],
-  ['getlaid_2dunits_2eh_6',['getlaid-units.h',['../getlaid-units_8h.html',1,'']]]
+  ['getlaid_2dtree_2eh_6',['getlaid-tree.h',['../getlaid-tree_8h.html',1,'']]],
+  ['getlaid_2dunits_2eh_7',['getlaid-units.h',['../getlaid-units_8h.html',1,'']]]
 ];

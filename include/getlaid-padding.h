@@ -1,5 +1,5 @@
 /**
- * \file getlaid-padding.h 
+ * \file getlaid-padding.h
  *
  * Inner padding for elements
  */
@@ -10,9 +10,9 @@
 #include <getlaid-rect.h>
 #include <getlaid-units.h>
 
-/** 
- * Describes element padding in GTLD_Units, any 
- * GTLD_Unit with GTLD_UNIT_AUTO type will be set to 0.  
+/**
+ * Describes element padding in GTLD_Units, any
+ * GTLD_Unit with GTLD_UNIT_AUTO type will be set to 0.
  */
 typedef struct GTLD_Padding {
   GTLD_Unit top;
@@ -21,7 +21,7 @@ typedef struct GTLD_Padding {
   GTLD_Unit left;
 } GTLD_Padding;
 
-/** 
+/**
  * Creates a new GTLD_Rect shrunk by the padding.
  *
  * \param rect Rect to shrink
