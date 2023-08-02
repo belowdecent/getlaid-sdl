@@ -9,10 +9,15 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +51,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('getlaid-padding_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +89,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
@@ -112,7 +129,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2fdea90d1fdfd5627d426a4700fd4c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new GTLD_Rect shrunk by the padding.  <br /></td></tr>
 <tr class="separator:a2fdea90d1fdfd5627d426a4700fd4c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Inner padding for elements. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="abf58bb202c935b721716ee81c3630302" name="abf58bb202c935b721716ee81c3630302"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf58bb202c935b721716ee81c3630302">&#9670;&#160;</a></span>GTLD_PADDING_ALL</h2>
 
@@ -144,7 +163,9 @@ Functions</h2></td></tr>
 <div class="line">    }                                              \</div>
 <div class="line">  }</div>
 <div class="ttc" id="astructGTLD__Padding_html"><div class="ttname"><a href="structGTLD__Padding.html">GTLD_Padding</a></div><div class="ttdoc">Describes element padding in GTLD_Units, any GTLD_Unit with GTLD_UNIT_AUTO type will be set to 0.</div><div class="ttdef"><b>Definition</b> getlaid-padding.h:17</div></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>Create a padding, where all values are equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unit</td><td>GTLD_UnitType of the padding </td></tr>
     <tr><td class="paramname">value</td><td>Value of the padding </td></tr>
@@ -182,7 +203,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  (<a class="code hl_struct" href="structGTLD__Padding.html">GTLD_Padding</a>) {                           \</div>
 <div class="line">    {unit, value}, {0}, {unit, value}, { 0 } \</div>
 <div class="line">  }</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>Create a padding with equal top and bottom values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unit</td><td>GTLD_UnitType of the padding </td></tr>
     <tr><td class="paramname">value</td><td>Value of the padding </td></tr>
@@ -220,7 +243,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  (<a class="code hl_struct" href="structGTLD__Padding.html">GTLD_Padding</a>) {                           \</div>
 <div class="line">    {0}, {unit, value}, {0}, { unit, value } \</div>
 <div class="line">  }</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>Create a padding with equal left and right values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unit</td><td>GTLD_UnitType of the padding </td></tr>
     <tr><td class="paramname">value</td><td>Value of the padding </td></tr>
@@ -256,6 +281,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a new GTLD_Rect shrunk by the padding. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rect</td><td>Rect to shrink </td></tr>
@@ -267,9 +294,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="getlaid-padding_8h.html">getlaid-padding.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>
