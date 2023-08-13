@@ -143,6 +143,7 @@ GTLD_Rect* GTLD_GetChildrenBounds(
   set_main_axis_coords(
     &state, c->main->alignment, main_dir
   );
+
   set_cross_axis_sizes(&state, c->cross, cross_dir);
   set_cross_axis_coords(
     &state, c->cross->alignment, cross_dir

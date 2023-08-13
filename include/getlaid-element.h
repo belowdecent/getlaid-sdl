@@ -7,7 +7,6 @@
 #ifndef __GTLD_ELEMENT
 #define __GTLD_ELEMENT
 
-#include <SDL_pixels.h>
 #include <getlaid-container.h>
 #include <getlaid-padding.h>
 
@@ -21,10 +20,9 @@ typedef struct GTLD_Element {
 
   GTLD_Rect* bounds; /**< Bounds of the element, which are
                        influenced by the parent layout */
-  const GTLD_Padding*
-    padding; /**< Inner padding, influences
-         bounds of children elements */
-  const GTLD_Container*
+  GTLD_Padding* padding; /**< Inner padding, influences
+                     bounds of children elements */
+  GTLD_Container*
     container; /**< Container, defines the layout of the
                   element children */
   struct GTLD_Element*

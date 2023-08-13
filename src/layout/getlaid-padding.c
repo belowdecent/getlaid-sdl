@@ -14,3 +14,17 @@ GTLD_Rect GTLD_PadBounds(
     .w = rect->w - left - right,
     .h = rect->h - top - bottom};
 }
+
+GTLD_Padding* GTLD_NewPadding(
+  GTLD_Unit top, GTLD_Unit right, GTLD_Unit bottom,
+  GTLD_Unit left
+) {
+  GTLD_Padding* padding = malloc(sizeof(GTLD_Padding));
+  *padding = (GTLD_Padding){
+    .top = top,
+    .right = right,
+    .bottom = bottom,
+    .left = left};
+
+  return padding;
+}

@@ -17,7 +17,8 @@ void print_assert(
   const char* fmt, int child_index, int value, int expected
 ) {
   printf(fmt, child_index, value, expected);
-  assert(value == expected);
+  if (value != expected)
+    exit(1);
 }
 
 int main() {
@@ -26,11 +27,12 @@ int main() {
     .y = PARENT_Y,
     .w = PARENT_W,
     .h = PARENT_H};
+
   GTLD_Element el = {
     .count = 2,
     .children = malloc(sizeof(GTLD_Element) * 2),
     .bounds = &rect,
-    .container = &GTLD_AUTOROW};
+    .container = GTLD_AutoContainer(GTLD_ROW)};
 
   el.children[0] = (GTLD_Element){0};
   el.children[1] = (GTLD_Element){0};
@@ -39,10 +41,9 @@ int main() {
     GTLD_GetChildrenBounds(el.container, el.bounds, 2);
 
   for (int i = 0; i < el.count; ++i) {
+    printf("Rect %i: %ix%i\n", i, rects[i].w, rects[i].h);
     el.children[i].bounds = &rects[i];
   }
-
-  free(rects);
 
   for (int i = 0; i < el.count; ++i) {
     print_assert(

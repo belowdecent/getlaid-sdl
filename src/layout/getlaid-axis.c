@@ -20,7 +20,15 @@ int GTLD_SetAxis(
   return 0;
 }
 
-const GTLD_Axis GTLD_AUTOAXIS = {
-  .layout = &GTLD_AUTOSIZE,
-  .count = 1,
-  .alignment = GTLD_ALIGN_BEGIN};
+GTLD_Axis* GTLD_AutoAxis() {
+  GTLD_Axis* axis = malloc(sizeof(GTLD_Axis));
+  GTLD_Unit* layout = malloc(sizeof(GTLD_Unit));
+  layout->unit = GTLD_UNIT_AUTO;
+
+  *axis = (GTLD_Axis){
+    .layout = layout,
+    .count = 1,
+    .alignment = GTLD_ALIGN_BEGIN};
+
+  return axis;
+}

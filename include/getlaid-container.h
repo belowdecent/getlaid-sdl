@@ -12,10 +12,11 @@
 
 /** Growth direction for the GTLD_Container */
 typedef enum GTLD_Direction {
-  GTLD_ROW,    /**< Main axis - horizontal, cross axis -
-                  vertical */
-  GTLD_COLUMN, /**< Main axis - vertical, cross axis -
-                  horizontal */
+  /** Main axis - horizontal, cross axis - vertical */
+  GTLD_ROW,
+
+  /** Main axis - vertical, cross axis - horizontal */
+  GTLD_COLUMN
 } GTLD_Direction;
 
 /** Repeat mode for layouts, needs rework */
@@ -31,21 +32,15 @@ typedef struct GTLD_Container {
   GTLD_Direction
     direction; /**< Container growth direction */
   GTLD_Repeat
-    repeat; /**< /todo make it a GTLD_Axis property */
+    repeat; /**< \todo make it a GTLD_Axis property */
 
-  const GTLD_Axis* main;  /**< main axis */
-  const GTLD_Axis* cross; /**< cross axis */
+  GTLD_Axis* main;  /**< main axis */
+  GTLD_Axis* cross; /**< cross axis */
 } GTLD_Container;
 
-/** Helper macro to create containers where children are
+/** Helper function to create containers where children are
  * equally aligned */
-#define GTLD_AUTOCONTAINER(dir)                   \
-  (GTLD_Container) {                              \
-    .direction = dir,                             \
-    .main = &GTLD_AUTOAXIS.cross = &GTLD_AUTOAXIS \
-  }
-
-extern const GTLD_Container GTLD_AUTOROW;
-extern const GTLD_Container GTLD_AUTOCOLUMN;
+GTLD_Container* GTLD_AutoContainer(GTLD_Direction direction
+);
 
 #endif

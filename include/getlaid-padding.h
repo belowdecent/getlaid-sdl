@@ -31,18 +31,23 @@ GTLD_Rect GTLD_PadBounds(
   const GTLD_Rect* rect, const GTLD_Padding* padding
 );
 
+GTLD_Padding* GTLD_NewPadding(
+  GTLD_Unit top, GTLD_Unit right, GTLD_Unit bottom,
+  GTLD_Unit left
+);
+
 /**
  * Create a padding, where all values are equal
  *
  * \param unit GTLD_UnitType of the padding
  * \param value Value of the padding
  */
-#define GTLD_PADDING_ALL(unit, value)              \
-  (GTLD_Padding) {                                 \
-    {unit, value}, {unit, value}, {unit, value}, { \
-      unit, value                                  \
-    }                                              \
-  }
+
+#define GTLD_PADDING_ALL(unit, value)                   \
+  GTLD_NewPadding(                                      \
+    (GTLD_Unit){unit, value}, (GTLD_Unit){unit, value}, \
+    (GTLD_Unit){unit, value}, (GTLD_Unit){unit, value}  \
+  )
 
 /**
  * Create a padding with equal left and right values
@@ -50,10 +55,11 @@ GTLD_Rect GTLD_PadBounds(
  * \param unit GTLD_UnitType of the padding
  * \param value Value of the padding
  */
-#define GTLD_PADDING_INLINE(unit, value)     \
-  (GTLD_Padding) {                           \
-    {0}, {unit, value}, {0}, { unit, value } \
-  }
+#define GTLD_PADDING_INLINE(unit, value)      \
+  GTLD_NewPadding(                            \
+    (GTLD_Unit){0}, (GTLD_Unit){unit, value}, \
+    (GTLD_Unit){0}, (GTLD_Unit){unit, value}  \
+  )
 
 /**
  * Create a padding with equal top and bottom values
@@ -61,9 +67,10 @@ GTLD_Rect GTLD_PadBounds(
  * \param unit GTLD_UnitType of the padding
  * \param value Value of the padding
  */
-#define GTLD_PADDING_BLOCK(unit, value)      \
-  (GTLD_Padding) {                           \
-    {unit, value}, {0}, {unit, value}, { 0 } \
-  }
+#define GTLD_PADDING_BLOCK(unit, value)       \
+  GTLD_NewPadding(                            \
+    (GTLD_Unit){unit, value}, (GTLD_Unit){0}, \
+    (GTLD_Unit){unit, value}, (GTLD_Unit){0}  \
+  )
 
 #endif

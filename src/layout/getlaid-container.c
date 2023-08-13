@@ -1,13 +1,16 @@
 #include <getlaid-container.h>
+#include <stdlib.h>
 
-const GTLD_Container GTLD_AUTOROW = {
-  .main = &GTLD_AUTOAXIS,
-  .cross = &GTLD_AUTOAXIS,
-  .direction = GTLD_ROW,
-  .repeat = GTLD_REPEAT_LAST};
+#include "getlaid-axis.h"
 
-const GTLD_Container GTLD_AUTOCOLUMN = {
-  .main = &GTLD_AUTOAXIS,
-  .cross = &GTLD_AUTOAXIS,
-  .direction = GTLD_COLUMN,
-  .repeat = GTLD_REPEAT_LAST};
+GTLD_Container* GTLD_AutoContainer(GTLD_Direction direction
+) {
+  GTLD_Container* c = malloc(sizeof(GTLD_Container));
+  *c = (GTLD_Container){
+    .direction = direction,
+    .main = GTLD_AutoAxis(),
+    .cross = GTLD_AutoAxis(),
+    .repeat = GTLD_REPEAT_LAST};
+
+  return c;
+}

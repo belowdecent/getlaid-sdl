@@ -8,7 +8,7 @@ GTLD_Tree GTLD_CreateTree(GTLD_Element* element) {
   if (element == NULL) {
     element = malloc(sizeof(GTLD_Element));
     *element = (GTLD_Element){
-      .container = &GTLD_AUTOROW,
+      .container = GTLD_AutoContainer(GTLD_ROW),
     };
   }
 

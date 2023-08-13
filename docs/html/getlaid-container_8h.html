@@ -92,9 +92,8 @@ $(document).ready(function(){initNavTree('getlaid-container_8h.html',''); initRe
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">getlaid-container.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -111,12 +110,6 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main object for defining layouts.  <a href="structGTLD__Container.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ae1e70e2fee735afa78cdf9ba7665511e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#ae1e70e2fee735afa78cdf9ba7665511e">GTLD_AUTOCONTAINER</a>(dir)</td></tr>
-<tr class="memdesc:ae1e70e2fee735afa78cdf9ba7665511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to create containers where children are equally aligned.  <br /></td></tr>
-<tr class="separator:ae1e70e2fee735afa78cdf9ba7665511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:aae0d7bef19a31c99ede6710759780837"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#aae0d7bef19a31c99ede6710759780837">GTLD_Direction</a> { <a class="el" href="getlaid-container_8h.html#aae0d7bef19a31c99ede6710759780837a2b4071e14fc1fd7d196ae777b884e1ff">GTLD_ROW</a>
@@ -132,43 +125,15 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a85956c9d085b0d4956882782d26ebba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat mode for layouts, needs rework.  <a href="getlaid-container_8h.html#a85956c9d085b0d4956882782d26ebba2">More...</a><br /></td></tr>
 <tr class="separator:a85956c9d085b0d4956882782d26ebba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:acd2e1d595e71be547e1c9727323bb806"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structGTLD__Container.html">GTLD_Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#acd2e1d595e71be547e1c9727323bb806">GTLD_AUTOROW</a></td></tr>
-<tr class="separator:acd2e1d595e71be547e1c9727323bb806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97f4e4c0cc8d9e645e82e0c8329a3ef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structGTLD__Container.html">GTLD_Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#aa97f4e4c0cc8d9e645e82e0c8329a3ef">GTLD_AUTOCOLUMN</a></td></tr>
-<tr class="separator:aa97f4e4c0cc8d9e645e82e0c8329a3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aee1f15e6f438b9f079d0def38ec8f428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGTLD__Container.html">GTLD_Container</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="getlaid-container_8h.html#aee1f15e6f438b9f079d0def38ec8f428">GTLD_AutoContainer</a> (<a class="el" href="getlaid-container_8h.html#aae0d7bef19a31c99ede6710759780837">GTLD_Direction</a> direction)</td></tr>
+<tr class="memdesc:aee1f15e6f438b9f079d0def38ec8f428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create containers where children are equally aligned.  <br /></td></tr>
+<tr class="separator:aee1f15e6f438b9f079d0def38ec8f428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Two-dimensional container consisting of main and cross axes, akin to CSS Flexbox. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ae1e70e2fee735afa78cdf9ba7665511e" name="ae1e70e2fee735afa78cdf9ba7665511e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1e70e2fee735afa78cdf9ba7665511e">&#9670;&#160;</a></span>GTLD_AUTOCONTAINER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GTLD_AUTOCONTAINER</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">dir</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  (<a class="code hl_struct" href="structGTLD__Container.html">GTLD_Container</a>) {                              \</div>
-<div class="line">    .direction = dir,                             \</div>
-<div class="line">    .main = &amp;<a class="code hl_variable" href="getlaid-axis_8h.html#a0cbff95dacbff3e1918123dcc39c4eff">GTLD_AUTOAXIS</a>.cross = &amp;<a class="code hl_variable" href="getlaid-axis_8h.html#a0cbff95dacbff3e1918123dcc39c4eff">GTLD_AUTOAXIS</a> \</div>
-<div class="line">  }</div>
-<div class="ttc" id="agetlaid-axis_8h_html_a0cbff95dacbff3e1918123dcc39c4eff"><div class="ttname"><a href="getlaid-axis_8h.html#a0cbff95dacbff3e1918123dcc39c4eff">GTLD_AUTOAXIS</a></div><div class="ttdeci">const GTLD_Axis GTLD_AUTOAXIS</div></div>
-<div class="ttc" id="astructGTLD__Container_html"><div class="ttname"><a href="structGTLD__Container.html">GTLD_Container</a></div><div class="ttdoc">Main object for defining layouts.</div><div class="ttdef"><b>Definition</b> getlaid-container.h:30</div></div>
-</div><!-- fragment -->
-<p>Helper macro to create containers where children are equally aligned. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="aae0d7bef19a31c99ede6710759780837" name="aae0d7bef19a31c99ede6710759780837"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae0d7bef19a31c99ede6710759780837">&#9670;&#160;</a></span>GTLD_Direction</h2>
 
@@ -213,48 +178,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aa97f4e4c0cc8d9e645e82e0c8329a3ef" name="aa97f4e4c0cc8d9e645e82e0c8329a3ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa97f4e4c0cc8d9e645e82e0c8329a3ef">&#9670;&#160;</a></span>GTLD_AUTOCOLUMN</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aee1f15e6f438b9f079d0def38ec8f428" name="aee1f15e6f438b9f079d0def38ec8f428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1f15e6f438b9f079d0def38ec8f428">&#9670;&#160;</a></span>GTLD_AutoContainer()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structGTLD__Container.html">GTLD_Container</a> GTLD_AUTOCOLUMN</td>
+          <td class="memname"><a class="el" href="structGTLD__Container.html">GTLD_Container</a> * GTLD_AutoContainer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getlaid-container_8h.html#aae0d7bef19a31c99ede6710759780837">GTLD_Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="acd2e1d595e71be547e1c9727323bb806" name="acd2e1d595e71be547e1c9727323bb806"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd2e1d595e71be547e1c9727323bb806">&#9670;&#160;</a></span>GTLD_AUTOROW</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structGTLD__Container.html">GTLD_Container</a> GTLD_AUTOROW</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Helper function to create containers where children are equally aligned. </p>
 
 </div>
 </div>
